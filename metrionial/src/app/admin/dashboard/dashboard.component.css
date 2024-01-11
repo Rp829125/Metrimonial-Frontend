@@ -1,0 +1,23 @@
+
+.dashboard-container{
+display: flex;
+flex-wrap: wrap;
+align-content: center;
+height:90%;
+width: 95%;
+border: 3px solid rgb(248, 232, 5);
+margin-top: 20px;
+
+}
+
+.dasboard-item{
+    display:flex;
+    align-items: center;
+   font-size: 19px;
+    margin-left:10px;
+    margin-top:10px;
+    width:13vmax;
+    height:15vmax;
+    border: 3px solid rgb(31, 248, 42)
+}
+

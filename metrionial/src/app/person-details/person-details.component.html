@@ -1,0 +1,130 @@
+<h3>PersonId Here: {{personId}}</h3>
+<h2 class="name-heading">{{person.firstName}} {{person.lastName}}</h2>
+
+<div class="profile-container">
+
+    <div class="photo-container">
+        <div class="profile-photo"><img src="../../assets/OIP.jpg"  ></div>
+        <div class="option-images-container">
+            <div class="option-images">image 1</div>
+            <div class="option-images">image 2</div>
+            <div class="option-images">image 3</div>
+            <div class="option-images">image 4</div>
+        </div>
+    </div>
+    
+    <div class="basic-details">
+       <div class="inform-container">       
+            <h4 class="field-name">Gender : <h4 class="field-value">{{person.gender}}</h4> </h4>
+            <h4 class="field-name">Contact No. : <h4 class="field-value">{{person.mobileNumber}}</h4></h4>
+            <h4 class="field-name">Birth Place : <h4 class="field-value">{{"birth place"}}</h4> </h4>
+        </div>
+
+        <div class="inform-container">
+            <h4 class="field-name">Date Of Birth : <h4 class="field-value">{{person.birthDate}}</h4> </h4>
+            <h4 class="field-name">Birth Time : <h4 class="field-value">{{"contach"}}</h4></h4>
+            <h4 class="field-name">Email ID : <h4 class="field-value">{{person.email}}</h4> </h4>
+        </div>
+
+    </div>
+    
+
+    <div class="intrested-button">
+        <button type="button" (click)="intrestedClick()">Intrested</button>
+    </div>
+</div>
+
+<div class="enquireForm" *ngIf="enquireshown">
+    <h2 >Enquiry Now</h2>
+    <form  [formGroup]="enquiryForm">
+        <label for="name" >Name:</label>
+        <input type="text" id="name"  formControlName ="name"><br>
+
+        <label for="mobile" >Phone:</label>
+        <input type="text" id="mobile" formControlName ="phone"><br>
+
+        <label for="email" >Email:</label>
+        <input type="email" id="email" formControlName ="email"><br>
+
+        <label  >Gender:</label>
+        <label for="male" >male</label>
+        <input type="radio" id="male" value="male" name="gender" formControlName ="gender">
+        <label for="female" >female</label>
+        <input type="radio" id="female" name="gender"  value="female" formControlName ="gender"><br>
+                                                            
+        <label  for="dateofbirth">City:</label>
+        <input type="text" id="city" formControlName ="city"><br>
+        
+
+        <button type="submit" class="submit-btn" (click)="submitEnquireData()">Submit</button>
+        <button  class="cancel-btn"  type="button"  (click)="cancelEnquireform()" background-color="red">Cancel</button>
+    </form>
+
+</div>
+
+
+<div class="all-details">
+    <div class="about-yourself">About Your Self</div>
+    <hr color="blue">
+    <div class="details-conatiners">
+        <div class="inform-container">
+            <h4 class="field-name">Matrial Status: <h4 class="field-value">{{pesonalDetails.maritalStatus}}</h4> </h4>
+            <h4 class="field-name">Height : <h4 class="field-value">{{pesonalDetails.height}}</h4></h4>
+            <h4 class="field-name">Skin Tone : <h4 class="field-value">{{pesonalDetails.skinTone}}</h4> </h4>
+        </div>
+        <div class="inform-container">
+            <h4 class="field-name">Body Type : <h4 class="field-value">{{pesonalDetails.bodyType}}</h4> </h4>
+            <h4 class="field-name">Weight : <h4 class="field-value">{{pesonalDetails.weight}}</h4></h4> 
+        </div>
+</div>
+
+<div class="about-yourself">Family Details</div>
+    <hr color="blue">
+    <div class="details-conatiners">
+        <div class="inform-container">
+            <h4 class="field-name">Father's Name : <h4 class="field-value">{{family.fatherName}}</h4> </h4>
+            <h4 class="field-name">Father's Occupation : <h4 class="field-value">{{family.fatherOccupation}}</h4></h4>
+            <h4 class="field-name">Brother's Profile : <h4 class="field-value">{{family.brotherProfile}}</h4> </h4>
+            <h4 class="field-name">Family Type : <h4 class="field-value">{{family.familyType}}</h4> </h4>
+        </div>
+        <div class="inform-container">
+            <h4 class="field-name">Mother's Name : <h4 class="field-value">{{family.motherName}}</h4> </h4>
+            <h4 class="field-name">Mother's Occupation : <h4 class="field-value">{{family.motherOccupation}}</h4></h4>
+            <h4 class="field-name">Sister's Profile : <h4 class="field-value">{{family.sisterProfile}}</h4> </h4>
+        </div>
+</div>
+
+<div class="about-yourself">Religious Background</div>
+    <hr color="blue">
+    <div class="details-conatiners">
+        <div class="inform-container">
+            <h4 class="field-name">Religion : <h4 class="field-value">{{religion.religion}}</h4> </h4>
+            <h4 class="field-name">Cast Division : <h4 class="field-value">{{religion.castDivision}}</h4></h4>
+            <h4 class="field-name">Subcast : <h4 class="field-value">{{religion.subCast}}</h4> </h4>
+        </div>
+        <div class="inform-container">
+            <h4 class="field-name">Gotra : <h4 class="field-value">{{religion.gotra}}</h4> </h4>
+            <h4 class="field-name">Rashi : <h4 class="field-value">{{religion.rashi}}</h4></h4>
+            <h4 class="field-name">Manglik : <h4 class="field-value">{{religion.manglik}}</h4> </h4>
+        </div>
+</div>
+
+<div class="about-yourself">Location</div>
+    <hr color="blue">
+    <div class="details-conatiners">
+        <div class="inform-container">
+            <h4 class="field-name">Country : <h4 class="field-value">{{loaction.country}}</h4> </h4>
+            <h4 class="field-name">City : <h4 class="field-value">{{loaction.city}}</h4></h4>
+            <h4 class="field-name">State : <h4 class="field-value">{{loaction.state}}</h4> </h4>
+            <h4 class="field-name">Address : <h4 class="field-value">{{loaction.address}}</h4> </h4>
+            
+        </div>
+        <div class="inform-container">
+            <h4 class="field-name">Education : <h4 class="field-value">{{education.education}}</h4> </h4>
+            <h4 class="field-name">Annual Income : <h4 class="field-value">{{education.annualIncome}}</h4></h4>
+            <h4 class="field-name">Work Location: <h4 class="field-value">{{education.workLocation}}</h4> </h4>
+            <h4 class="field-name">Occupation: <h4 class="field-value">{{education.occupation}}</h4> </h4>
+        </div>
+</div>
+
+</div>

@@ -1,0 +1,10 @@
+<router-outlet></router-outlet>
+<div class="divider"></div>
+<div class="bride-container">
+    <div class="person-card" *ngFor="let person of members">
+        <img class="card-img" alt="frofile Image" src="../../assets/OIP.jpg" height="155rem" >
+        <h4>{{person.firstName}} {{person.lastName}}</h4>
+        <h4>Age:{{person.age}}</h4>
+        <button (click)="viewDetails(person.id)"><a routerLink="details/{{person.id}}">Veiw Details</a></button>
+        </div>
+</div>
