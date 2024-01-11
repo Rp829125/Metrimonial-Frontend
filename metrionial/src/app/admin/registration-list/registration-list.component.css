@@ -1,0 +1,17 @@
+.registration-list{
+    display:flex;
+    flex-direction: column;
+}
+.heading-name{
+    height:10%;
+    width: 80%;
+    background-color: rgb(94, 93, 92);
+    font-size: 22px;
+    margin: 3% 0% 3%  3%;
+    padding: 5px 5px 5px 5px 
+}
+
+.registration-list>th{
+    margin-left: 10px;
+
+}

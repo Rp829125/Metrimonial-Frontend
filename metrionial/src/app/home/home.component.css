@@ -40,11 +40,30 @@
 
 .feature-text{
     text-align: center;
+    margin-top: 20px;
 }
 
 .features-member{
+    display: flex;
+    
     border: 2px solid violet;
     height: 15rem;
+
+}
+
+.person-card{
+    text-align: center;
+    height: 15rem;
+    width: 10rem;
+    border: 1.5px rgb(14, 13, 13) solid;
+    margin-left: 4rem;
+  
+}
+
+.person-card>img{
+    border-bottom: 0px;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
 }
 
 .latest-text{
@@ -54,6 +73,7 @@
 .latest-member{
     border: 2px solid violet;
     height: 15rem;
+    display: flex;
 }
 
 .success-text{

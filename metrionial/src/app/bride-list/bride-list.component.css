@@ -1,0 +1,39 @@
+.divider{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-top: 10px double rgb(5, 4, 4);
+}
+
+.bride-container{
+    display: flex;
+  
+    flex-wrap: wrap;
+    border: 2px solid palegreen;
+    
+   
+}
+
+.person-card{
+    text-align: center;
+    height: 18rem;
+    width: 11rem;
+    border: 1.5px rgb(14, 13, 13) solid;
+    margin-left: 3rem;
+    margin-bottom: 20px;
+  
+}
+
+.person-card>img{
+    border-bottom: 0px;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+
+.person-card>button{
+    width:7rem;
+    height: 1.5rem;
+    background-color: rgb(111, 181, 243);
+    border: 1px black solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+}

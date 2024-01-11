@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     imageArrey = ["../../assets/image1.webp","../../assets/image12.jpg","../../assets/image13.webp","../../assets/image14.jpg","../../assets/image15.jpg"]
     imgIndex:number = 0;
     private autoChangeInterval: any
+    members:any[] = [];
 
     ngOnInit():void{
       this.setImage(this.imgIndex)
@@ -41,17 +42,20 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
 
   // Fetching Members Details Here
-  members = []
+
 
   getMember(){
     const data = this.http.getPerson().subscribe((data)=>{
-      this.members = data
+
+    for(let x=0; x<=5; x++){
+        this.members.push(data[x])
+      }
       console.log(data)
+      console.log(this.members)
     },
     err => console.log(err)
     )
-   
-   
+
   }
    
 
